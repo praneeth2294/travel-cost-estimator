@@ -1,10 +1,17 @@
+from dotenv import load_dotenv
+import os
 import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import asyncio
+import sys
 
-api_key = st.secrets["API_KEY"]
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
+
+api_key = st.secrets["API"]["API_KEY"]
 
 ## streamlit UI
 st.set_page_config(page_title="Travel Cost Estimator", layout="wide")
