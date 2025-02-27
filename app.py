@@ -3,8 +3,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-with open(r"C:\Users\prane\OneDrive\data science internship\text1.txt",'r') as key:
-    api_key = key.read()
+with open(r"C:\Users\prane\OneDrive\Desktop\api key.txt", "r") as file:
+    api_key = file.read().strip() 
 
 
 ## streamlit UI
