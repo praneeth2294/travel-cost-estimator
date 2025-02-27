@@ -1,12 +1,10 @@
-from dotenv import load_dotenv
-import os
 import streamlit as st
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-load_dotenv("task6.env")
-api_key = os.getenv("API_KEY")
+with open("text1.txt", "r") as file:
+    api_key = file.read().strip()
 
 
 ## streamlit UI
