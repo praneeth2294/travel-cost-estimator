@@ -3,8 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-with open("text1.txt", "r") as file:
-    api_key = file.read().strip()
+api_key = st.secrets["API_KEY"]
 
 
 ## streamlit UI
