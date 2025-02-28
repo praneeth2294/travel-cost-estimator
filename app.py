@@ -9,7 +9,7 @@ if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
-api_key = st.secrets["API"]["API_KEY"]
+api_key = st.secrets["API_KEY"]
 
 ## streamlit UI
 st.set_page_config(page_title="Travel Cost Estimator", layout="wide")
